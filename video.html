@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频作品 - 沈玉苹个人作品集</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/gallery.css">
+    <link rel="stylesheet" href="css/components/lightbox.css">
+    <link rel="stylesheet" href="css/pages/works.css">
+    <link rel="stylesheet" href="css/pages/footer-fix.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navigation">
+            <div class="nav-logo">
+                <a href="index.html">设计师作品集</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="about.html" class="nav-link">关于</a></li>
+                <li><a href="illustration.html" class="nav-link">插画</a></li>
+                <li><a href="brand.html" class="nav-link">品牌</a></li>
+                <li><a href="publication.html" class="nav-link">出版物</a></li>
+                <li><a href="web.html" class="nav-link">网页</a></li>
+                <li><a href="aigc.html" class="nav-link">AIGC</a></li>
+                <li><a href="modeling.html" class="nav-link">建模</a></li>
+                <li><a href="game.html" class="nav-link">游戏</a></li>
+                <li><a href="video.html" class="nav-link active">视频</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主要内容 -->
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>视频作品</h1>
+                <p>动态 · 交互影像</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery">
+
+                <!-- 视频作品 1 -->
+                <div class="gallery-item" data-category="video">
+                    <video 
+                        src="assets/Videos/reel/1.mp4" 
+                        poster="assets/Images/video/1.jpg"
+                        controls 
+                        preload="metadata"
+                        playsinline
+                        style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"
+                        onclick="event.stopPropagation();"
+                    ></video>
+                    <div class="gallery-item-info">
+                        <h3>《流光记》</h3>
+                        <p>动态视觉 · 2025 手书作品</p>
+                    </div>
+                </div>
+
+                <!-- 视频作品 2 -->
+                <div class="gallery-item" data-category="video">
+                    <video 
+                        src="assets/Videos/reel/2.mp4" 
+                        poster="assets/Images/video/2.jpg"
+                        controls 
+                        preload="metadata"
+                        playsinline
+                        style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"
+                        onclick="event.stopPropagation();"
+                    ></video>
+                    <div class="gallery-item-info">
+                        <h3>《微光》</h3>
+                        <p>动态视觉 · 2025 定格动画</p>
+                    </div>
+                </div>
+
+                <!-- 想加更多视频，按上面结构继续复制即可 -->
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 灯箱组件（保留结构，视频不使用） -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption">
+                <h3></h3>
+                <p></p>
+            </div>
+            <button class="lightbox-prev">&lt;</button>
+            <button class="lightbox-next">&gt;</button>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 沈玉苹个人作品集 保留所有使用权</p>
+            <div class="social-links">
+                <a href="mailto:designer@example.com">联系我</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/modules/lightbox.js"></script>
+    <script src="js/modules/gallery.js"></script>
+</body>
+</html>

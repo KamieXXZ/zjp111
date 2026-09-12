@@ -1,0 +1,424 @@
+/* 关于页面样式 */
+
+/* 英雄区域 */
+.about-hero {
+    padding: calc(var(--spacing-3xl) + 80px) 0 var(--spacing-3xl);
+    background-color: var(--color-accent);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(254, 249, 243, 0.8) 0%, rgba(254, 249, 243, 0.95) 100%);
+    z-index: 1;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: var(--spacing-xl);
+    animation: fadeIn 1s ease-out;
+}
+
+.about-hero-content h1 {
+    font-size: var(--font-size-5xl);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.about-hero-content p {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 个人资料区域 */
+.about-details {
+    padding: var(--spacing-3xl) 0;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2xl);
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.profile-image {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    border: 5px solid var(--color-white);
+    box-shadow: var(--shadow-xl);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-primary);
+}
+
+/* ============================================================
+   设计师简介 - 内容排版（统一字号 1.05rem / 统一字重 500）
+   ============================================================ */
+
+/* 简介正文 */
+.profile-info .bio-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: #374151;
+    letter-spacing: 0.01em;
+    margin: 0 0 1.9rem;
+}
+
+.profile-info .bio-text strong {
+    color: #1F2937;
+    font-weight: 600;
+}
+
+/* 子区块（获奖荣誉 / 软件技能） */
+.profile-info .bio-section {
+    margin-bottom: 1.9rem;
+}
+
+.profile-info .bio-section:last-child {
+    margin-bottom: 0;
+}
+
+/* 子区块标题 */
+.profile-info .bio-section h3 {
+    position: relative;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #1F2937;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.9rem;
+    padding-left: 0.85rem;
+}
+
+/* 标题左侧淡蓝色细竖线（呼应网站主色） */
+.profile-info .bio-section h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 1em;
+    border-radius: 2px;
+    background: #AECFE0;
+}
+
+/* 获奖列表 */
+.award-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.award-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: #374151;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.65rem;
+}
+
+.award-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* 奖项前的淡蓝小圆点 */
+.award-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #AECFE0;
+}
+
+/* 软件技能文字 */
+.profile-info .tool-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: #374151;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+/* ============================================================
+   设计师简介 - 响应式
+   ============================================================ */
+@media (max-width: 768px) {
+    .profile-info .bio-text,
+    .award-list li,
+    .profile-info .tool-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* ============================================================
+   技能区域
+   ============================================================ */
+.skills {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-background);
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-text-primary);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.skill-item {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.skill-item h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #e5e7eb;
+    border-radius: var(--border-radius-full);
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius-full);
+    transition: width 1s ease-out;
+}
+
+/* ============================================================
+   联系方式区域
+   ============================================================ */
+.contact {
+    padding: var(--spacing-xl) 0 var(--spacing-xl);
+    background-color: var(--color-accent);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-primary);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: var(--container-xl);
+    margin: 0 auto var(--spacing-xl);
+    padding: 0 var(--spacing-md);
+}
+
+.contact-item {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.contact-item p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.social-links a {
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+    transition: color var(--transition-fast);
+}
+
+.social-links a:hover {
+    color: var(--color-primary);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    background-color: var(--color-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form h3 {
+    text-align: center;
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-primary);
+}
+
+/* ============================================================
+   移动端适配
+   ============================================================ */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: calc(var(--spacing-2xl) + 80px) 0 var(--spacing-2xl);
+    }
+
+    .about-hero-content h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .about-hero-content p {
+        font-size: var(--font-size-lg);
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        flex: 1;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+/* ============================================================
+   关于页 - 联系我区块（最终生效版）
+   ============================================================ */
+.contact {
+    padding: 1.4rem 0 1.4rem !important;
+}
+
+.contact h2 {
+    font-size: 1.45rem !important;
+    text-align: center !important;
+    margin-bottom: 0.9rem !important;
+}
+
+.contact-info {
+    gap: 1rem !important;
+    margin-bottom: 0 !important;
+}
+
+.contact-item {
+    padding: 0.8rem 1.4rem !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+}
+
+.contact-item h3 {
+    font-size: 0.98rem !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.contact-item p {
+    font-size: 1rem !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+@media (max-width: 767px) {
+    .contact {
+        padding: 1.2rem 1rem 1.2rem !important;
+    }
+
+    .contact h2 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.7rem !important;
+    }
+
+    .contact-item {
+        padding: 0.7rem 1.2rem !important;
+    }
+
+    .contact-item h3 {
+        font-size: 0.92rem !important;
+    }
+
+    .contact-item p {
+        font-size: 0.95rem !important;
+    }
+}
+/* ============================================================
+   关于页 - 页脚底部留白（避免"联系我"贴底）
+   ============================================================ */
+
+footer {
+    padding: 0 0 1rem !important;
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 0 0 2rem !important;
+    }
+}

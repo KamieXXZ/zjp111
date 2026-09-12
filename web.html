@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页设计 - 沈玉苹个人作品集</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/gallery.css">
+    <link rel="stylesheet" href="css/components/lightbox.css">
+    <link rel="stylesheet" href="css/pages/works.css">
+    <link rel="stylesheet" href="css/pages/footer-fix.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navigation">
+            <div class="nav-logo">
+                <a href="index.html">设计师作品集</a>
+            </div>
+            <ul class="nav-menu">
+               <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="about.html" class="nav-link">关于</a></li>
+                <li><a href="illustration.html" class="nav-link">插画</a></li>
+                <li><a href="brand.html" class="nav-link">品牌</a></li>
+                <li><a href="publication.html" class="nav-link">出版物</a></li>
+                <li><a href="web.html" class="nav-link active">网页</a></li>
+                <li><a href="aigc.html" class="nav-link">AIGC</a></li>
+                <li><a href="modeling.html" class="nav-link">建模</a></li>
+                <li><a href="game.html" class="nav-link">游戏</a></li>
+                <li><a href="video.html" class="nav-link">视频</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主要内容 -->
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>网页设计</h1>
+                <p>打造优雅数字体验，结合美学与功能的网页界面设计</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="group1">悦她APP</button>
+                <button class="filter-btn" data-filter="group2">HBN</button>
+                <button class="filter-btn" data-filter="group3">薇诺娜</button>
+            </div>
+
+            <div class="gallery">
+                <!-- 企业网站 -->
+                <div class="gallery-item" data-category="group1">
+                    <img src="assets/Images/Web/1.jpg" alt="网页设计 1">
+                    <div class="gallery-item-info">
+                        <h3>悦她APP A</h3>
+                        <p>展板A</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="group1">
+                    <img src="assets/Images/Web/2.jpg" alt="网页设计 2">
+                    <div class="gallery-item-info">
+                        <h3>悦她APP B</h3>
+                        <p>展板B</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="group1">
+                    <img src="assets/Images/Web/3.jpg" alt="网页设计 3">
+                    <div class="gallery-item-info">
+                        <h3>悦她APP C</h3>
+                        <p>展板C</p>
+                    </div>
+                </div>
+
+                <!-- 电商平台 -->
+                <div class="gallery-item" data-category="group2">
+                    <img src="assets/Images/Web/4.jpg" alt="网页设计 4">
+                    <div class="gallery-item-info">
+                        <h3>HBN手机版网页设计 A</h3>
+                        <p>网页A</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="group2">
+                    <img src="assets/Images/Web/5.jpg" alt="网页设计 5">
+                    <div class="gallery-item-info">
+                        <h3>HBN手机版网页设计 A</h3>
+                        <p>网页B</p>
+                    </div>
+                </div>
+
+                <!-- 创意作品集 -->
+                <div class="gallery-item" data-category="group3">
+                    <img src="assets/Images/Web/6.jpg" alt="网页设计 6">
+                    <div class="gallery-item-info">
+                        <h3>品牌官网设计</h3>
+                        <p>薇诺娜</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 灯箱组件 -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption">
+                <h3></h3>
+                <p></p>
+            </div>
+            <button class="lightbox-prev">&lt;</button>
+            <button class="lightbox-next">&gt;</button>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 沈玉苹个人作品集. 保留所有权利.</p>
+            <div class="social-links">
+                <a href="mailto:designer@example.com">联系我</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/modules/lightbox.js"></script>
+    <script src="js/modules/gallery.js"></script>
+</body>
+</html>

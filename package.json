@@ -1,0 +1,24 @@
+{
+  "name": "image-optimizer",
+  "version": "1.0.0",
+  "description": "Image optimization tool for the website",
+  "main": "optimize-images.js",
+  "scripts": {
+    "optimize": "node optimize-images.js"
+  },
+  "dependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^7.0.0",
+    "imagemin-svgo": "^10.0.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "image",
+    "optimization",
+    "web"
+  ],
+  "author": "",
+  "license": "ISC"
+}

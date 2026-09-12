@@ -1,0 +1,286 @@
+/* 首页样式 */
+
+/* 英雄区域 */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23FCE4B6" width="50" height="50" /><rect fill="%23AECFE0" x="50" y="50" width="50" height="50" /><rect fill="%23F2C5C5" x="50" width="50" height="50" /><rect fill="%23E69591" y="50" width="50" height="50" /></svg>');
+    background-size: 200px 200px;
+    background-position: center;
+    background-repeat: repeat;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(254, 249, 243, 0.8) 0%, rgba(254, 249, 243, 0.95) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: var(--spacing-xl);
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: var(--font-size-5xl);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.hero-content p {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 作品分类预览 */
+.categories-preview {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-background);
+}
+
+.categories-preview h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-text-primary);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* 分类卡片 */
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.category-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    transition: transform var(--transition-slow) !important;
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-xl);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: var(--color-white);
+    z-index: 2;
+}
+
+.category-info h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-white);
+}
+
+.category-info p {
+    font-size: var(--font-size-lg);
+    margin-bottom: 0;
+    color: var(--color-white);
+}
+
+/* ============================================================
+   个人简介预览（蓝色区块）
+   ============================================================ */
+.about-preview {
+    background-color: var(--color-secondary);
+    width: 100vw;
+    margin: 0 calc(-50vw + 50%);
+    padding: 1.6rem 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* 容器：和 .categories-grid 用同一套宽度 / 边距 */
+.about-preview .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;                               /* 文字和图片之间的空隙 */
+    max-width: var(--container-xl);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--spacing-md);
+    box-sizing: border-box;
+    position: relative;                       /* 给竖线做定位参考 */
+}
+
+/* ⭐ 竖线：放在内容容器的正中间（文字和图片之间） */
+.about-preview .content-wrapper::after {
+    content: '';
+    position: absolute;
+    left: calc(55% + 3rem);                   /* 55%（文字宽）+ 3rem（gap的一半） */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 80%;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.65) 20%,
+        rgba(255, 255, 255, 0.65) 80%,
+        transparent 100%
+    );
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* ---------- 左侧文字块 ---------- */
+.about-content {
+    flex: 1 1 55%;
+    max-width: 55%;
+    padding: 0;
+    text-align: left;
+}
+
+.about-content h2 {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+    white-space: nowrap;
+    text-align: left;
+}
+
+.about-content p {
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+
+.about-content .btn-primary {
+    margin-top: 0.3rem;
+}
+
+/* ---------- 右侧图片块 ---------- */
+.about-image {
+    flex: 0 0 auto;
+    text-align: right;
+    padding: 0;
+}
+
+.about-image img {
+    width: 290px;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-full);
+    border: 5px solid var(--color-white);
+    box-shadow: var(--shadow-xl);
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* ============================================================
+   移动端适配
+   ============================================================ */
+@media (max-width: 768px) {
+    .hero { height: 80vh; }
+
+    .hero-content h1 { font-size: var(--font-size-4xl); }
+    .hero-content p { font-size: var(--font-size-lg); }
+
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+    }
+
+    .about-preview {
+        padding: 1.3rem 0;
+    }
+
+    .about-preview .content-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 var(--spacing-md);
+    }
+
+    /* 竖排时隐藏竖线 */
+    .about-preview .content-wrapper::after {
+        display: none;
+    }
+
+    .about-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-content h2,
+    .about-content p {
+        text-align: center;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+
+    .about-image img {
+        margin: 0 auto;
+        width: 200px;
+    }
+}
+
+/* ============================================================
+   蓝色关于我区块：竖线右移
+   ============================================================ */
+
+.about-preview .content-wrapper::after {
+    left: calc(59% + 8rem) !important;    /* 50% + 1.5rem → 56% + 4rem，明显右移 */
+}
+
+/* 蓝色区块高度微降 */
+.about-preview {
+    padding: 1.3rem 0 !important;            /* 1.6rem → 1.3rem */
+}
+
+@media (max-width: 768px) {
+    .about-preview {
+        padding: 1.1rem 0 !important;
+    }
+}

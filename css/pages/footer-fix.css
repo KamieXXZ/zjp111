@@ -1,0 +1,185 @@
+/* 页脚样式调整 - 针对非about页面 */
+
+/* ⭐ 整个页脚：去掉额外底部留白 */
+footer {
+    padding: 0 !important;
+}
+
+/* ⭐ 页脚内容：上下内边距压紧 + 项间距收紧 */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 1rem var(--spacing-md) 1.2rem !important;
+    text-align: center;
+    gap: 0.4rem !important;
+}
+
+/* 版权文字 */
+.footer-content p {
+    margin-bottom: 0;
+    flex: none;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+/* 联系方式 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-top: 0 !important;
+}
+
+.social-links a {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.9rem var(--spacing-md) 1rem !important;
+        gap: 0.35rem !important;
+    }
+
+    .footer-content p {
+        font-size: 0.85rem !important;
+    }
+
+    .social-links {
+        margin-top: 0 !important;
+        justify-content: center;
+    }
+
+    .social-links a {
+        font-size: 0.85rem !important;
+    }
+}
+/* ============================================================
+   页脚：版权信息 + 联系我，水平居中
+   ============================================================ */
+
+footer {
+    text-align: center !important;
+}
+
+.footer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+}
+
+.footer-content p,
+.footer-content .social-links,
+.footer-content .social-links a {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.footer-content p {
+    width: 100% !important;
+}
+
+.social-links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* 移动端同步 */
+@media (max-width: 768px) {
+    .footer-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+/* ============================================================
+   页脚：绝对居中（grid 强居中）
+   ============================================================ */
+
+footer {
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+    padding: 0 !important;
+}
+
+.footer-content {
+    display: grid !important;                /* ⭐ grid 布局 */
+    place-items: center !important;          /* ⭐ 双向居中 */
+    grid-auto-flow: row !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem 1rem 1.2rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    gap: 0.4rem !important;
+}
+
+.footer-content p {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+}
+
+.social-links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.social-links a {
+    text-align: center !important;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 0.9rem 1rem 1rem !important;
+    }
+}
+/* ============================================================
+   页脚：上下留白一致
+   ============================================================ */
+
+.footer-content {
+    padding: 1rem 1rem 1rem !important;    /* 上、下都是 1rem，对称 */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 0.9rem 1rem 0.9rem !important;
+    }
+}
+/* ============================================================
+   页脚：只缩窄下面
+   ============================================================ */
+
+.footer-content {
+    padding: 0.7rem 1rem 0.4rem !important;    /* 顶 0.7rem 不变，底 0.4rem */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 0.6rem 1rem 0.35rem !important;
+    }
+}

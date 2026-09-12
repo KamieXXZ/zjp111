@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏作品 - 沈玉苹个人作品集</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/gallery.css">
+    <link rel="stylesheet" href="css/components/lightbox.css">
+    <link rel="stylesheet" href="css/pages/works.css">
+    <link rel="stylesheet" href="css/pages/footer-fix.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navigation">
+            <div class="nav-logo">
+                <a href="index.html">设计师作品集</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="about.html" class="nav-link">关于</a></li>
+                <li><a href="illustration.html" class="nav-link">插画</a></li>
+                <li><a href="brand.html" class="nav-link">品牌</a></li>
+                <li><a href="publication.html" class="nav-link">出版物</a></li>
+                <li><a href="web.html" class="nav-link">网页</a></li>
+                <li><a href="aigc.html" class="nav-link">AIGC</a></li>
+                <li><a href="modeling.html" class="nav-link">建模</a></li>
+                <li><a href="game.html" class="nav-link active">游戏</a></li>
+                <li><a href="video.html" class="nav-link">视频</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主要内容 -->
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>游戏玩法演示</h1>
+                <p>完整录屏 · 实机操作展示</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery">
+
+                <!-- 游戏作品 1 -->
+                <div class="gallery-item" data-category="game">
+                    <video 
+                        src="assets/Videos/game/1.mp4" 
+                        poster="assets/Images/game/1.jpg"
+                        controls 
+                        preload="metadata"
+                        playsinline
+                        style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"
+                        onclick="event.stopPropagation();"
+                    ></video>
+                    <div class="gallery-item-info">
+                        <h3>《薄暮下的誓约》</h3>
+                        <p> RPG类 · 解密游戏完整录制演示</p>
+                    </div>
+                </div>
+
+                <!-- 游戏作品 2 -->
+                <div class="gallery-item" data-category="game">
+                    <video 
+                        src="assets/Videos/game/2.mp4" 
+                        poster="assets/Images/game/2.jpg"
+                        controls 
+                        preload="metadata"
+                        playsinline
+                        style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"
+                        onclick="event.stopPropagation();"
+                    ></video>
+                    <div class="gallery-item-info">
+                        <h3>《午夜跑者》</h3>
+                        <p>竞技益智类 · 完整流程演示</p>
+                    </div>
+                </div>
+
+                <!-- 想加更多游戏，按上面结构继续复制即可，改 src / poster / 文字 -->
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 灯箱组件（保留结构） -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption">
+                <h3></h3>
+                <p></p>
+            </div>
+            <button class="lightbox-prev">&lt;</button>
+            <button class="lightbox-next">&gt;</button>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 沈玉苹个人作品集 保留所有使用权</p>
+            <div class="social-links">
+                <a href="mailto:designer@example.com">联系我</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/modules/lightbox.js"></script>
+    <script src="js/modules/gallery.js"></script>
+</body>
+</html>
